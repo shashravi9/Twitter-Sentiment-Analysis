@@ -1,0 +1,24 @@
+Number of users collected: 10
+Number of Tweets collected: 2000
+Number of communities discovered: 3
+Average number of users per community: Average = 536.666667
+********************************
+Manually Trained and Tested data
+********************************
+Number of instances per class found:
+Positive Count: 3
+Negative Count: 3
+Neutral Count: 14
+Positive Tweets: .@ZackSnyder is an absolutely masterful visual storyteller.  The way he brings comic book panels to life into gorge https://t.co/fU5EvsbhhG
+Negative Tweets:  COMING SOON \nThe Flash in #JusticeLeague, Ezra Miller is our starry-eyed cover for Winter 17/18!  Pre-or https://t.co/wLoGiob1Lq
+Neutral Tweets: Ben and Henry's faces while the others are jamming are priceless... hahah :D #JusticeLeague's Jason Momoa, Ben Affl https://t.co/C3a5P7XzrT
+*******************************************************
+For Affin train data
+********************************
+Number of instances per class found:
+Positive Count: 1080
+Negative Count: 840
+Neutral Count: 80
+Positive Tweets: Reading my kindle2...  Love it... Lee childs is good read.
+Negative Tweets: @Karoli I firmly believe that Obama/Pelosi have ZERO desire to be civil.  It's a charade and a slogan, but they want to destroy conservatism
+Neutral Tweets: need suggestions for a good IR filter for my canon 40D ... got some? pls DM

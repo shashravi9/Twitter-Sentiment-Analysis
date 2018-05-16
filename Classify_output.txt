@@ -1,0 +1,18 @@
+********* Classification Phase **********
+Number of Tweets:
+2000
+Test train and predict for manually trained data taken only 20 from first 100 tweets
+K cross Validation accuracy is:  0.583333333333
+Predicted values:
+[ 0  0  0  0  1 -1  0  1  0  0  0  0  1 -1  0  0  0  0 -1  0]
+***********************
+Test for Affin data
+Values for first 200 predictions of affin data
+K cross Validation accuracy is:  0.593469387755
+Predicted values:
+[2 0 4 4 0 4 4 4 4 0 4 0 0 0 4 0 0 0 0 0 4 0 4 4 0 0 4 2 0 0 0 0 0 4 0 0 0
+ 4 4 4 4 0 4 4 4 2 0 0 0 4 4 4 0 0 0 0 4 0 4 4 0 2 4 0 0 4 4 4 0 4 0 4 0 4
+ 4 4 0 4 4 4 4 4 4 4 4 4 4 0 4 4 4 4 0 4 0 4 4 4 0 4 2 0 4 4 0 4 4 4 4 0 4
+ 0 0 0 4 0 0 0 0 0 4 0 4 4 0 0 4 2 0 0 0 0 0 4 0 0 0 4 4 4 4 0 4 4 4 2 0 0
+ 0 4 4 4 0 0 0 0 4 0 4 4 0 2 4 0 0 4 4 4 0 4 0 4 0 4 4 4 0 4 4 4 4 4 4 4 4
+ 4 4 0 4 4 4 4 0 4 0 4 4 4 0 4]

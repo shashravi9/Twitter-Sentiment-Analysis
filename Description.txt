@@ -1,0 +1,64 @@
+Introduction:
+
+*My first thought came in mind for this project is finding the sentiment for Movies based on user tweets using Twitter API.
+I choose 'JusticeLeague' as a movie for sentiment analysis.
+
+API's Used:
+*Twitter API, SKlearn, networkx, pandas, pickle, numpy etc.
+
+Files:
+*Collect.py: collects the tweets with the query as #JusticeLeague. I have collected about tweets and separated the userIDs, user FriendIds, user FollowerIDs.
+*Python's pickle library has been used to save the data that is collected in this file.
+
+*Cluster.py: Reads the data saved from Collect.py and identifies the communities using Girvan_Newman  algorithm. The communities detected has been saved using pickle library. Networkx Graph also has been plotted to show how the communities are distributed.
+
+*Classify.py: Reads the data saved from Collect.py and does the sentimental analysis using CountVectorizer and TfidfVectorizer. Analysis result has been saved using pickle library.
+
+*Summarize.py: Reads the data that is saved in Collect.py, Cluster.py and Classify.py and writes the data to give the summary of the project.
+
+DESCRIPTION:
+
+*Initially I have collected 2000 tweets with the query as 'JusticeLeague'. I have taken 10 random users and their screenNames from the tweets collected. The reason for choosing 10 random user is because of twitter rate limit. But, saved all the collected tweets.
+For each random user I have collected 100 friends and 100 followers. By collecting these many friends and followers for each random user to make the dense communities. I have saved the dictionary in a file as "collected_data.p". Dictionary contains 5 fields, userIds, FriendIds, FollowerIds, ScreenName of user and tweets collected. Data is save using pickle library of python.
+
+*By using the "collected_data.p", I use Girvan_Newman algorithm to get 'n' communities. 'n' is dependent on the data collected. Sometimes, the 'n' may remain same even when more and more data is collected. I have plotted the Networkx graph to show the community distribution for collected data.
+
+*To classify the data that I have collected, I manually labeled them and saved it in "labeled_data.p" file. If the labeled data is not available then labeling is done manually but, it shows the user prompt to label the data. If labeled data is already available then it will use the same.
+*I have manually labeled 80 tweets from first 100 records and saved them in a file.
+*I am using remaining 20 tweets of first 100 records to predict the sentiment of the tweets.
+*I have also used some already trained data "AFINN" which has affinity is already set to it. I used AFINN to compare the correctness of manually labeled data against the train data already labeled.
+*I have used CountVectorizer to vectorize and SVM linear classifier to predict the test data.
+*The classified data has been saved in 2 files. 1 for test data classified_data.p and another for afinn data classified_affin_data.p
+
+*All the collected data are used in Summarize.py to display and to write the summary in a file.
+
+Exception Handled:
+*I have handled the labeling part by prompting user to provide correct input, i.e. if they enter any wrong value other than the mentioned in prompt, it will reprompt for user input. Untill, it gets the proper input form user.
+
+*I am removing non ascii characters from the tweets to remove spams.
+
+*I have provided user to collect based on his inputs buy just changing few arguments in the file, user can collect data by using sleep_mode as well as non_sleep_mode, by changing single argument in the collect.py
+*I have provided user to replace any custom trained/labeled data to input for manually labeled data, by just changing the file name in Classify.py
+
+
+Conclusion:
+
+*When it comes to community detection, I have used more user and less friend and followers, but I got less dense community. So to improvise this I collected 100 friends and 100 users with 10 random users to get the data by keeping in mind about the twitter rate limit. This is another observation.
+
+*The sentiment analysis helped me understand how communities are separated. How many are satisfied with the movie and how many are not i.e how many have  given good reviews and how many have given bad reviews.
+
+*By scaling this we can figure it out how the movie is doing in market. Is they are liking the movie or disliking the movie. Lexicons also could have been used but it reduces the prediction accuracy, however there might be some chances that tweets may be ambiguous which may not have resulted in correct accuracy.
+
+*I was trying to compare my results with manually labeled data and AFINN data. My results shows that, both of them are equally matching. May be I have to train some more data to get the correct accuracy. This is my observation
+
+*For manually labeled data, I can see that the K-Fold value was maximum at 25 folds. If I increase it by 1 fold also, it started decreasing. So I have used 25 folds for manually labeled data. So, 25 is threshold for Manually labeled data.
+
+*For AFINN data, I can see that the K-Fold value was maximum at 35 folds. If i increase it by 1 fold also, it started decreasing. So I have used 35 folds for AFINN data.So, 35 is threshold for AFINN data.
+
+Output files:
+*Please check the output of each file as
+Collect.py - Collection_output.txt and collected_data.p
+Cluster.py - Cluster_output.txt and clustered_data.p
+Classify.py - Classify_output.txt , classified_data.p and classified_affin_data.p
+Summarize.py - Summary_output.txt and summarize.txt
+

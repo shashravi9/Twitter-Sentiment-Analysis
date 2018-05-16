@@ -1,0 +1,4 @@
+***********Collection phase*********
+Number of Tweets collected: 2000
+User Ids is [365055733, 494678624, 17859908, 2842736904, 23118511, 23596371, 1966021698, 287556019, 51605368, 2468371338]
+Screen names is ['jimwelch88', 'NostalgicToys', 'obrienjohnjack', 'natanette', 'iamnotatwit', 'PlanetaryGoGo', 'itzmoe', 'flashflanagan1', 'ToasterMemes', 'SonyBlainesim']
